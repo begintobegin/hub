@@ -1,0 +1,199 @@
+$primary: #11998e;
+$secondary: #38ef7d;
+$white: #fff;
+$gray: #9b9b9b;
+.form__group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 50%;
+}
+
+.form__field {
+  font-family: inherit;
+  border: 0;
+width: 100%;
+  outline: 0;
+  font-size: 1.3rem;
+  color: $white;
+  padding: 7px 0;
+  background: inherit;
+  transition: border-color 0.2s;
+
+  &::placeholder {
+    color: transparent;
+  }
+
+  &:placeholder-shown ~ .form__label {
+    font-size: 1.3rem;
+    cursor: text;
+    top: 20px;
+  }
+}
+
+input {
+
+  padding: 10px;
+  font-size: 16px;
+
+  border: 2px solid transparent;
+  position: relative;
+  z-index: 1;
+  outline: none;
+}
+
+/* Контейнер для input с псевдоэлементом */
+.input-container {
+  position: relative;
+  display: inline-block;
+}
+
+.input-container::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(90deg, red, rgb(179, 19, 19), rgb(0, 0, 0), green, blue, indigo, red);
+  background-size: 200% 200%;
+  border-radius: 5px;
+  z-index: -1;
+  animation: move-border 10s linear infinite;
+}
+
+.input-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #222222; /* Цвет фона input */
+  z-index: -1;
+  border-radius: 5px;
+}
+
+/* Анимация */
+@keyframes move-border {
+  0% {
+      background-position: 0% 50%;
+  }
+  100% {
+      background-position: 100% 50%;
+  }
+}
+
+
+/* reset input */
+
+/* demo */
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 1.5rem;
+  // background-color: #222222;
+  animation: color-changer 4s infinite;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.short__link{
+ margin-top: 50px;
+}
+.btn-new{
+   user-select: none;
+   margin-top: 30px;
+   background: inherit;
+   border: none;
+
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 5px 20px;
+  font-size: 18px;
+  font-family: 'Arial', sans-serif; /* Шрифт */
+  font-weight: bold; /* Жирный текст */
+  color: black; /* Цвет текста */
+  
+  text-transform: uppercase; /* Преобразование текста в верхний регистр */
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  animation: color-change 4s infinite;
+}
+
+
+.shortener{
+  background: none;
+  border: none;
+  padding: 5px 20px;
+  font-size: 18px;
+  font-family: 'Arial', sans-serif; /* Шрифт */
+  font-weight: bold; /* Жирный текст */
+  color: black; /* Цвет текста */
+  
+  text-transform: uppercase; /* Преобразование текста в верхний регистр */
+  position: relative;
+
+  outline: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  animation: color-change 4s infinite; /* Анимация бесконечна и длится 4 секунды */
+}
+@keyframes color-change {
+  0% {
+      color: #3498db; /* Начальный цвет */
+  }
+  50% {
+      color: #e74c3c; /* Средний цвет */
+  }
+  100% {
+      color: #3498db; /* Конечный цвет */
+  }
+}
+@keyframes color-changer {
+  0% {
+      background-color: #12232e; /* Начальный цвет */
+  }
+  50% {
+      background-color: #0a0808; /* Средний цвет */
+  }
+  100% {
+      background-color: #12232e; /* Конечный цвет */
+  }
+}
+.short__link{
+  background: none;
+  border: none;
+  padding: 5px 20px;
+  font-size: 18px;
+  font-family: 'Arial', sans-serif; /* Шрифт */
+  font-weight: bold; /* Жирный текст */
+  color: black; /* Цвет текста */
+  
+  text-transform: uppercase; /* Преобразование текста в верхний регистр */
+  position: relative;
+  
+  outline: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  animation: color-change 4s infinite; /* Анимация бесконечна и длится 4 секунды */
+}
+
+input {
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 16px;
+  color: red;
+  transition: color 1s; /* Плавное изменение цвета текста */
+  outline: none;
+}
